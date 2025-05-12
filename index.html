@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/49ae187f59.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Fk-removebg-preview.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Devoloper</p>
+                <h1>Hi, I'm <span>POOVARASAN</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------------------------------------about------------------------------------------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/User.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I'm Poovarasan, a passionate and dedicated Full Stack Developer. As a fresher, I bring strong technical skills, fresh ideas, and a commitment to learning and growing in the software development industry.I specialize in building responsive and dynamic web applications using modern technologies across both the frontend and backend. My technical toolkit includes HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB, among others. I enjoy solving complex problems, creating seamless user experiences, and collaborating with teams to deliver impactful projects.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-con active-tab" id="skills">
+                            <ul>
+                                <li><span>front-end Developer</span><br>Technologies like HTML, CSS, and JavaScript. </li>
+                                <li><span>Back-end Developer</span><br>Technical skills include proficiency in programming languages like Java or strong database management knowledge, API development, and familiarity with server-side frameworks.</li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-con" id="education">
+                            <ul>
+                                <li><span>2020 - 2024</span><br>Shree Venkateshwara Hi-Tech Engineering College - BE (CSE)</li>
+                                <li><span>2019 - 2020</span><br>Government Higher Secondary School - HSC</li>
+                                <li><span>2017 - 2018</span><br>Government Higher Secondary School - HSC</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------------------Contact----------------------------------------------------------- -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contect Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i> pkpoovarasan@gmail.com</p>
+                    <p> <i class="fa-solid fa-phone"></i> +91 6382331532</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href=""><i class="fab fa-github"></i></a>
+                    </div>
+                    <a href="images/POOVARASAN R.pdf" download class="btn">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Comments" rows="6" placeholder="Your Comment"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h1>© 2025 POOVARASAN. All rights reserved.</h1>
+    </footer>
+   
+  <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcons = document.getElementsByClassName("tab-con");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcon of tabcons){
+            tabcon.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+  </script>  
+
+</body>
+</html>
